@@ -5,6 +5,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono&subset=latin,cyrillic">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="js/stas.js"></script>
+  <script src="js/game.js"></script>
   <title>Код и Магия</title>
 </head>
 <body>
@@ -180,7 +182,27 @@
     <p class="setup-similar-label">Петр Петров</p>
   </div>
 </template>
-
+<canvas id="canvas"></canvas>
+<script>
+  var fireballSize = 22;
+  function getFireballSpeed (windToLeft) {
+    if (windToLeft) {
+      return 5;
+    }
+    return 2;
+  }
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  function getWizardHeight () {
+    return 1.337 * wizardWidth;
+  }
+  function getWizardX (fieldWidth) {
+    return fieldWidth / 2;
+  }
+  function getWizardY (fieldHeight) {
+    return fieldHeight / 3;
+  }
+</script>
 <script src="js/game.js"></script>
 
 </body>
